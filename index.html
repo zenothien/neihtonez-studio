@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neihtonez Studio — Creator Video Review &amp; Publishing Tool</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --card: #171b26;
+      --border: #262c3d;
+      --text: #eef1f7;
+      --muted: #9aa4b8;
+      --accent: #fe2c55;
+      --accent-soft: rgba(254, 44, 85, 0.14);
+      --teal: #25f4ee;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 880px; margin: 0 auto; padding: 48px 24px 64px; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+    .brand { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; }
+    .brand span { color: var(--accent); }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.95rem;
+    }
+    nav a:hover { color: var(--text); }
+    .badge {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: #ff6b86;
+      border: 1px solid rgba(254, 44, 85, 0.35);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    h1 { font-size: 2.2rem; line-height: 1.2; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); font-size: 1.08rem; max-width: 680px; margin-bottom: 36px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+    }
+    .card h2 { font-size: 1.05rem; margin-bottom: 8px; color: var(--text); }
+    .card p { color: var(--muted); font-size: 0.94rem; }
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+    .section h2 { font-size: 1.15rem; margin-bottom: 12px; }
+    .section ul { padding-left: 20px; color: var(--muted); }
+    .section li { margin-bottom: 8px; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    footer a { color: var(--text); text-decoration: none; margin-right: 16px; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">Neihtonez <span>Studio</span></div>
+      <nav>
+        <a href="./index.html">Overview</a>
+        <a href="./terms.html">Terms of Service</a>
+        <a href="./privacy.html">Privacy Policy</a>
+      </nav>
+    </header>
+
+    <div class="badge">Desktop Creator Companion</div>
+    <h1>Review, verify, and publish vertical short-form videos to TikTok.</h1>
+    <p class="lead">
+      Neihtonez Studio is a desktop workflow tool built for creators to inspect rendered 9:16 animated
+      stories, verify platform compliance and AI disclosure labels, and publish approved videos directly
+      through the official TikTok Content Posting API.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>1. Official TikTok Login Kit</h2>
+        <p>Authenticates securely via OAuth 2.0 with PKCE so creators authorize posting only for their own account.</p>
+      </div>
+      <div class="card">
+        <h2>2. Human Review &amp; Compliance</h2>
+        <p>Displays video metadata, captions, hashtags, and privacy controls so creators approve every post before upload.</p>
+      </div>
+      <div class="card">
+        <h2>3. Direct Post &amp; Inbox Drafts</h2>
+        <p>Supports both Direct Post (<code>video.publish</code>) and TikTok Inbox Drafts (<code>video.upload</code>) without watermarks.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>How It Works</h2>
+      <ul>
+        <li>Sign in with your TikTok account using Login Kit (<code>user.info.basic</code>).</li>
+        <li>Inspect your rendered MP4, clean caption, and creator posting options fetched from <code>creator_info/query</code>.</li>
+        <li>Select your desired privacy level, interaction permissions, and disclosure settings, then confirm upload.</li>
+      </ul>
+    </div>
+
+    <footer>
+      <div>&copy; 2026 Neihtonez Studio &middot; Creator Channel: <a href="https://www.tiktok.com/@neihtonez" target="_blank" rel="noopener">@neihtonez</a></div>
+      <div>
+        <a href="./terms.html">Terms of Service</a>
+        <a href="./privacy.html">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
